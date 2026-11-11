@@ -1,39 +1,49 @@
-# SPEED, THEN AND NOW — Verified Sidebar (Newsletter Slice)
+# Speed, Then and Now — Verified Sidebar
 
-## 1) Driver Spotlight: Lewis Hamilton ✅ VERIFIED
+*All facts below checked against live data on pre-flight: F1 API records, Met Museum collection API, and web search.*
 
-From the official F1 driver data (driverId: `hamilton`):
-- **Permanent number:** `"44"` ✓ (data returned `"permanentNumber":"44"`)
-- **Nationality:** `"British"` ✓ (data returned `"nationality":"British"`)
-- **Date of birth:** `"1985-01-07"` ✓ (data returned `"dateOfBirth":"1985-01-07"`)
-- Code: HAM; givenName: Lewis; familyName: Hamilton
+## Driver Spotlight: Lewis Hamilton ✅ VERIFIED
 
-*draft line holds up on all three counts.*
+From the F1 driver record (`getDriverInfo` for `driverId: hamilton`):
+- `permanentNumber`: "44" — **correct**
+- `nationality`: "British" — **correct**
+- `dateOfBirth`: "1985-01-07" — **correct**
+- Bonus: driver code `HAM`, givenName: Lewis, familyName: Hamilton.
 
-## 2) Is Anything Live in F1 Right Now? 📡 status: NO
+All three draft details hold up. Safe to print as-is.
 
-- `getCurrentSessionStatus` returned an **empty result** — no live session is currently active.
-- `getLiveCarData` returned an **empty array** — no car telemetry is being streamed.
+## Is Anything Live in F1 Right Now? ⚠️ Nothing live at this moment
 
-*draft line should read: "Nothing live this Saturday morning — the grid is quiet, the telemetry feeds are dark, and we'll be back when the cars start rolling."*
+- `getCurrentSessionStatus` returned an **empty object `{}`** — no active F1 session right now.
+- `getLiveCarData` returned an **empty array `[]`** — no car telemetry feed is streaming.
 
-## 3) Art Corner: Chariots Were the First Speed Machines ✅ VERIFIED
+**Plain answer for the newsletter:** as of this check, there is no live F1 session or live car data. Don't promise readers a "live laps" box this weekend; by Saturday morning it may well be different. Link to the F1 live timing page instead.
 
-From The Metropolitan Museum of Art collection (Object ID **250666**):
-- **Title:** *Bronze ornament from a chariot pole*
-- **Department / Culture:** Greek and Roman Art (Roman period object; Medusa tag)
-- **Medium:** Bronze, silver, copper
-- **Credit line:** Rogers Fund, 1918
-- **Image:** https://images.metmuseum.org/CRDImages/gr/original/DP-12515-001.jpg
+## Art Corner: Chariots Were the First Speed Machines ✅
 
-*Feature line:* "Speed had a silhouette long before it had an engine note. The Met's bronze chariot adornment sits in Greek-Roman galleries — 2,000 years ahead of Hamilton's #44."
+Primary pick — from the Metropolitan Museum of Art collection (Object ID **247020**, department: Greek and Roman Art; medium: bronze, ivory; credit line: Rogers Fund, 1903):
+- **Title:** Bronze chariot inlaid with ivory
+- **Maker/Culture:** Etruscan (ca. 500 BC, 6th century BC; found at Monteleone di Spoleto)
+- **Date:** ca. 500 BC (Archaic period, Etruscan)
+- The Met's tags include Achilles and Thetis — this was a ceremonial war chariot.
+- Image: https://images.metmuseum.org/CRDImages/gr/original/DP137936.jpg
 
-## 4) History: It All Started at Silverstone in 1950 ✅ VERIFIED
+Also verified in the Met's collection (Object ID 250666, Greek and Roman Art, Rogers Fund 1918, medium: bronze, silver, copper; tags: Medusa):
+- **Title:** Bronze ornament from a chariot pole
 
-Web search confirms: the inaugural FIA Formula 1 World Championship ran in **1950**, and the first World Championship race was held on **May 13, 1950 at the Silverstone circuit in the UK** (British GP, won by an Alfa Romeo). Sources: redbull.com history of grand prix racing; oldracingcars.com/1950; forix.com/wc1950.
+*Sidebar line:* "Speed had a silhouette long before it had an engine note. The Met's Etruscan bronze chariot — inlaid with ivory, ca. 500 BC — sat in Monteleone di Spoleto nearly 2,500 years before Hamilton's #44."
 
-*draft line is correct as written: "It all started at Silverstone in 1950."*
+## History: It All Started at Silverstone in 1950 ✅ VERIFIED
 
----
+Web search confirms: the inaugural Formula One World Championship race was run on **13 May 1950 at Silverstone** — the **1950 British Grand Prix** — won by **Nino Farina** in an Alfa Romeo, in front of King George VI. Your draft line is accurate on both the year and the circuit.
 
-**Verification note:** All facts checked against live F1 data, the Met's collection API, and web search on the day of publishing. Every line above is source-quoted.
+## Verdict Box
+
+| Draft line | Status |
+|---|---|
+| Hamilton: No. 44, British, born 1985-01-07 | ✅ Verified against F1 data |
+| Live F1 session + telemetry right now | ⚠️ Nothing live — empty status + empty telemetry |
+| Chariots were the first speed machines | ✅ Met Museum: Etruscan bronze chariot, ca. 500 BC (Obj. 247020; also Obj. 250666) |
+| It all started at Silverstone in 1950 | ✅ Verified: 13 May 1950, Silverstone GP, Farina won |
+
+*Speed, then and now — fact-checked before send. No guesswork here.*
